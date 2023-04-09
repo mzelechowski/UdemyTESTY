@@ -40,7 +40,7 @@ class MealTest {
         Meal meal1 = new Meal(10, "Pizza");
         Meal meal2 = new Meal(10, "Pizza");
 
-        //when
+        //then
         assertEquals(meal1, meal2, "Checking if two meals are equal");
         assertThat(meal1, not(sameInstance(meal2)));
     }

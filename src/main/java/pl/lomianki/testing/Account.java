@@ -16,9 +16,6 @@ public class Account {
         return this.active;
     }
 
-    public void setActive(boolean active) {
-        this.active = active;
-    }
 
     public Address getDefaultDeliveryAddress() {
         return defaultDeliveryAddress;
