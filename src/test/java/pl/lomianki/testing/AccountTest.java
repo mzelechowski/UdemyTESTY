@@ -2,6 +2,8 @@ package pl.lomianki.testing;
 
 import org.junit.jupiter.api.Test;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class AccountTest {
@@ -9,6 +11,7 @@ public class AccountTest {
     public void newAccountShouldNotBeActiveAfterCreation() {
         Account newAccount = new Account();
         assertFalse(newAccount.isActive());
+        assertThat(newAccount.isActive(), is(false));
     }
 
     @Test
@@ -19,6 +22,7 @@ public class AccountTest {
         newAccount.activate();
         //then
         assertTrue(newAccount.isActive());
+        assertThat(newAccount.isActive(),equalTo(true));
     }
 
     @Test
@@ -29,6 +33,8 @@ public class AccountTest {
         Address address = account.getDefaultDeliveryAddress();
         //then
         assertNull(address);
+        assertThat(address, nullValue());
+
     }
 
     @Test
@@ -43,5 +49,6 @@ public class AccountTest {
 
         //then
         assertNotNull(defaultDeliveryAddress);
+        assertThat(defaultDeliveryAddress,notNullValue());
     }
 }
