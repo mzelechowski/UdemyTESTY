@@ -2,7 +2,6 @@ package pl.lomianki.testing;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -37,7 +36,6 @@ public class OrderTest {
     void addingMealToOrderShouldIncreaseOrderSize() {
         //given
         Meal meal = new Meal(15, "Burger");
-        Meal meal2 = new Meal(13, "Sandwich");
         Order order = new Order();
         //when
         order.addMealToOrder(meal);
