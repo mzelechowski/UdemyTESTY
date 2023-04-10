@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
+import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -54,7 +55,11 @@ class CartTest {
                 () -> assertThat(cart.getOrders(), hasSize(1)),
                 () -> assertThat(cart.getOrders(), is(not(empty()))),
                 () -> assertThat(cart.getOrders(), is(not(emptyCollectionOf(Order.class)))),
-                () -> assertThat(cart.getOrders().get(0).getMeals(), empty())
+                // () -> assertThat(cart.getOrders().get(0).getMeals(), empty())
+                () -> {
+                    List<Meal> meals = cart.getOrders().get(0).getMeals();
+                    assertThat(meals, emptyCollectionOf(Meal.class));
+                }
         );
     }
 }
