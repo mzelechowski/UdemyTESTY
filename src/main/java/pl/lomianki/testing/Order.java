@@ -3,6 +3,7 @@ package pl.lomianki.testing;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Order {
     private List<Meal> meals = new ArrayList<>();
 
@@ -21,6 +22,16 @@ public class Order {
     void cancel(){
         this.meals.clear();
     }
+
+    public int totalPrice() throws IllegalStateException {
+       // return this.meals.stream().collect(Collectors.summingInt(m-> m.getPrice()));
+        int sum=this.meals.stream().mapToInt(meal->meal.getPrice()).sum();
+        if(sum <0 )
+             throw new IllegalStateException("Price limit exceeded");
+        else
+            return sum;
+    }
+
 
     @Override
     public String toString() {
