@@ -79,4 +79,26 @@ public class AccountTest {
         //then
         assertThrows(IllegalArgumentException.class, ()->account.setEmail("wrongEmail"));
     }
+
+    @Test
+    void validEmailShouldBeSet(){
+        //given
+        Account account = new Account();
+
+        //when
+        account.setEmail("java@jestsuper.pl");
+
+        //then
+        assertThat(account.getEmail(),is("java@jestsuper.pl"));
+
+    }
+    @Test
+    void newAccountShouldNotBeActiveIfDefaultDeliveryEmailIsNull(){
+        //given
+        Account account = new Account(null);
+
+        //when
+        //then
+        assertThat(account.getDefaultDeliveryAddress(), nullValue());
+    }
 }
