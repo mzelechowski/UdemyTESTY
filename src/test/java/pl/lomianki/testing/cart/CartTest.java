@@ -1,7 +1,9 @@
-package pl.lomianki.testing;
+package pl.lomianki.testing.cart;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import pl.lomianki.testing.Meal;
+import pl.lomianki.testing.cart.Cart;
 import pl.lomianki.testing.order.Order;
 
 import java.time.Duration;

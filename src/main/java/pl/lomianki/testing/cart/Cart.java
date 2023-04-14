@@ -1,5 +1,6 @@
-package pl.lomianki.testing;
+package pl.lomianki.testing.cart;
 
+import pl.lomianki.testing.Meal;
 import pl.lomianki.testing.order.Order;
 
 import java.util.ArrayList;
