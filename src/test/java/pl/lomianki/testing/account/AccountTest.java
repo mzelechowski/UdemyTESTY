@@ -1,8 +1,10 @@
-package pl.lomianki.testing;
+package pl.lomianki.testing.account;
 
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import pl.lomianki.testing.account.Account;
+import pl.lomianki.testing.account.Address;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;

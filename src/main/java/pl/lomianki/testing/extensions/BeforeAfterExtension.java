@@ -1,4 +1,4 @@
-package pl.lomianki.testing;
+package pl.lomianki.testing.extensions;
 
 import org.junit.jupiter.api.extension.AfterEachCallback;
 import org.junit.jupiter.api.extension.BeforeEachCallback;

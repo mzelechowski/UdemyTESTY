@@ -1,4 +1,4 @@
-package pl.lomianki.testing;
+package pl.lomianki.testing.account;
 
 public class Account {
     private boolean active;

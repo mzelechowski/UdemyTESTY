@@ -1,5 +1,7 @@
 package pl.lomianki.testing;
 
+import pl.lomianki.testing.order.Order;
+
 import java.util.ArrayList;
 import java.util.List;
 

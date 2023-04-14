@@ -1,4 +1,4 @@
-package pl.lomianki.testing;
+package pl.lomianki.testing.account;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;

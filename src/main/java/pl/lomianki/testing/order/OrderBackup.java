@@ -1,4 +1,6 @@
-package pl.lomianki.testing;
+package pl.lomianki.testing.order;
+
+import pl.lomianki.testing.order.Order;
 
 import java.io.*;
 

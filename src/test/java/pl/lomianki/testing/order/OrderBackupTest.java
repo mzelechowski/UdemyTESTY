@@ -1,6 +1,9 @@
-package pl.lomianki.testing;
+package pl.lomianki.testing.order;
 
 import org.junit.jupiter.api.*;
+import pl.lomianki.testing.Meal;
+import pl.lomianki.testing.order.Order;
+import pl.lomianki.testing.order.OrderBackup;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -29,7 +32,7 @@ public class OrderBackupTest {
     void backupOrderWithOneMeal() throws IOException {
         //given
         Meal meal= new Meal(7, "Fries");
-        Order order= new Order();
+        pl.lomianki.testing.order.Order order= new Order();
         order.addMealToOrder(meal);
 
         //when
